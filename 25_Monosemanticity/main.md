@@ -3,3 +3,10 @@
 
 ## Monosemanticity
 Monosemanticity refers to the property of a component (e.g., a neuron or a feature) in a model having a single, clear, and interpretable meaning or functionality. A monosemantic component responds consistently to one type of input or encodes one specific concept, making it easier to understand and predict its behavior.
+
+- we use a weak dictionary learning algorithm called a sparse autoencoder to generate learned features from a trained model that offer a more monosemantic unit of analysis than the model's neurons themselves
+
+Results
+- Sparse Autoencoders extract relatively monosemantic features. 
+- Features appear to "split" as we increase autoencoder size.
+- 
