@@ -33,16 +33,14 @@ This can be interpreted as looking for “tangent curves” at each point along 
 ![alt text](image.png)
 
 - In another example, the model creates two 4-layer long pathways(circuit) to detect the presence of dog's head in left and right orientations respectively. Both these pathways ran in parallel and inhibited each other.![alt text](image-1.png)
-- 
+- Another eg shows multiple layer long car detection circuit which looks for wheels at the bottom and windows at the top(and inhibiting each other). After that, instead of summing all this up and creating a car detection neuron, the model creates multiple car detection neurons, polysemantic with dog detection :o
+- `This circuit suggests that polysemantic neurons are, in some sense, deliberate. That is, you could imagine a world where the process of detecting cars and dogs was deeply intertwined in the model for some reason, and as a result polysemantic neurons were difficult to avoid. But what we’re seeing here is that the model had a “pure neuron” and then mixed it up with other features.'`
+- We call this phenomenon superposition. Why would it do such a thing? We believe superposition allows the model to use fewer neurons, conserving them for more important tasks. As long as cars and dogs don't co-occur, the model can accurately retrieve the dog feature in a later layer, allowing it to store the feature without dedicating a neuron.
+
+
 ## Claim 3: Universality
--  Analogous features and circuits form across models and tasks. 
-
-
-
-
+- Analogous features and circuits form across models and tasks.
+- `If it was true in the strongest sense, one could imagine a kind of “periodic table of visual features” which we observe and catalogue across models.`
 
 # Note
-
-1. Polysemantic neurons: Neurons that respond to multiple unrelated inputs.`Our hope is that it may be possible to resolve polysemantic neurons, perhaps by “unfolding” a network to turn polysemantic neurons into pure features, or training networks to not exhibit polysemanticity in the first place. `
-
-2. 
+1. Polysemantic neurons: Neurons that respond to multiple unrelated inputs.`Our hope is that it may be possible to resolve polysemantic neurons, perhaps by “unfolding” a network to turn polysemantic neurons into pure features, or training networks to not exhibit polysemanticity in the first place. 
