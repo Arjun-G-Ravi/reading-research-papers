@@ -51,4 +51,16 @@
 ![alt text](image-2.png)
 - Residual connections can also be (in some sense) conceptualised as branches
 - Perhaps the most surprising thing about branch specialization is that the same branch specializations seem to occur again and again, across different architectures and tasks. 
--  
+
+# Thread 9: Weight Banding
+- A phenomenon that the authors observed in the last layers of image models, in which the weights appear to 'band' together.
+![alt text](image-3.png)
+- In the case of weight banding, we think of it as a structural phenomenon because the pattern appears at the scale of an entire layer. 
+- Weight banding consistently forms in the final convolutional layer of vision models with global average pooling. 
+- AlexNet does not have a pooling operation before its fully connected layers and does not show banding at its last convolutional layer. If one looks at the weights of this fully connected layer, the weights strongly vary as a function of the global y position. 
+![alt text](image-4.png)
+- The horizontal stripes in weight banding mean that the filters don't care about horizontal position, but are strongly encoding relative vertical position. Our hypothesis is that weight banding is a learned way to preserve spatial information as it gets lost through various pooling operations. 
+- They also trained a model with the images rotated 90 degrees. This resulted in the bands being vertical
+- `The use of aggressive pooling after the last convolutions in common models causes weight banding.`
+- Authors tried many other modifications to see when and where banding appears.
+- It’s unclear whether weight banding is “good” or “bad.” However, it is an example of a consistent link between architecture decisions and the resulting trained weights.
