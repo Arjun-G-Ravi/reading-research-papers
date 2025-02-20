@@ -37,4 +37,18 @@
 - They are highly universal - present in almost all models and tasks we’ve looked at.
 
 # Thread 6: Curve Circuits
-- 
+- The authors learns the curve circuits and then implements it in a new model
+
+# Thread 7: Visualizing Weights
+- Researchers do not generally visualize weights
+- Sometimes meaningful interactions between neurons might happen between neurons that are far away
+- They expand weights to understand it
+
+# Thread 8: Branch Specialization :)
+- The authors look for "organs" in the network that are larger than circuits - they call them branch specialization
+- `The earliest example of branch specialization that we’re aware of comes from AlexNet. AlexNet is famous as a jump in computer vision, arguably starting the deep learning revolution, but buried in the paper is a fascinating, rarely-discussed detail. The first two layers of AlexNet are split into two branches which can’t communicate until they rejoin after the second layer. This structure was used to maximize the efficiency of training the model on two GPUs, but the authors noticed something very curious happened as a result. The neurons in the first layer organized themselves into two groups: black-and-white Gabor filters formed on one branch and low-frequency color detectors formed on the other branch`
+
+![alt text](image-2.png)
+- Residual connections can also be (in some sense) conceptualised as branches
+- Perhaps the most surprising thing about branch specialization is that the same branch specializations seem to occur again and again, across different architectures and tasks. 
+-  
