@@ -15,6 +15,8 @@ deliberate reasoning, and a low-level (L) module for fast, detailed computations
 There is a slow planner(H) and a fast executor(L). The H gives a high-level task for L to do. The L is superfast and does multiple fast iterations to do the task. Note that all this happens within the network in one go, and the model actually runs only once for the whole task. So if it is an LLM, then all the task will be performed in one go.
 The H provides a stable guiding signal for L.
 
+There is a system called Adaptive Computation Time (ACT) which allows RNNs to dynamically adjust the number of computational steps based on the complexity of the input. However, ACT can lead to instability during training, as the model may struggle to determine the optimal number of steps for each input, resulting in erratic behavior and convergence issues. 
+
 - does this thing scale well
 - can i use this to make an LLM
   - or can i use this as a tool to assist LLM reasoning
